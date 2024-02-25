@@ -1,19 +1,23 @@
 import "./App.css";
-import NavBar from "./components.js";
+import {NavBar, Main} from "./components.js";
+
 function App(){
     return(
       <>
        <head>
        <title>X</title>
        </head>
-      <div className="bg-black w-screen h-screen text-white flex cursor-pointer">
+      <div className="bg-black m-0 p-0 fixed w-screen h-screen text-white flex   cursor-pointer">
+        <div>
         <NavBar/>
-        <div className="w-full h-screen">
-
         </div>
-        <div className="w-full h-screen">
           
+          <div className="grow ml-8">
+          <Main />
           </div>
+          
+
+
       </div>  
       </>
     );
