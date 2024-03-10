@@ -5,7 +5,7 @@ function App(){
     return(
       <>
        <head>
-       <title>X</title>
+       <title>Home/X</title>
        </head>
       <div className="bg-black m-0 p-0 fixed w-screen h-screen text-white flex   cursor-pointer">
         <div>

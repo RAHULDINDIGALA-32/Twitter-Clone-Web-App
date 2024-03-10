@@ -1,5 +1,5 @@
-import {useState} from 'react';
-import { UserData } from './data';
+//import {useState} from 'react';
+import { UserData ,PostData} from './data';
 
 
 function Post_Button(){
@@ -105,13 +105,31 @@ export  function NavBar(){
 
 export function Main(){
   return(
-<div className=" relative grow h-screen ">
-   
-
- <div className="absolute left-0 w-7/12  h-screen border-zinc-400 border-x border-opacity-45 border-solid ">
+<div className=" flex w-[100%] h-screen justify-start ">
+   <div className='ml-1 flex justify-between  gap-4 w-[88%] grow-1'>
+   <div className="shrink-0 w-[60.0%] h-screen border-[rgb(47,51,54)] border-x  border-solid ">
        
  </div>
 
+ <div className=" h-screen w-[40%] mr-3 ml-1">
+
+ </div>
+
+   </div>
+ 
 </div>
   )
+}
+
+
+function post({PostData}) {
+ return(
+   <div classname="">
+
+    
+
+
+   </div>
+
+ )
 }
