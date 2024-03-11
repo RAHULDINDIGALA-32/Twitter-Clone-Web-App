@@ -102,13 +102,23 @@ export  function NavBar(){
 }
 
 
+function Post({PostData}) {
+  return(
+    <div classname="w-[100%] h-14 border-x-2 bg-red-500 border-[rgb(47,51,54)] border-solid">
+       
+ 
+ 
+    </div>
+ 
+  )
+ }
 
 export function Main(){
   return(
 <div className=" flex w-[100%] h-screen justify-start ">
    <div className='ml-1 flex justify-between  gap-4 w-[88%] grow-1'>
    <div className="shrink-0 w-[60.0%] h-screen border-[rgb(47,51,54)] border-x  border-solid ">
-       
+       <Post/>
  </div>
 
  <div className=" h-screen w-[40%] mr-3 ml-1">
@@ -122,14 +132,4 @@ export function Main(){
 }
 
 
-function post({PostData}) {
- return(
-   <div classname="">
 
-    
-
-
-   </div>
-
- )
-}
