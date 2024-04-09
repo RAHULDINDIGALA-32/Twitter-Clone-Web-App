@@ -8,16 +8,14 @@ function App(){
        <title>Home/X</title>
        </head>
       <div className="bg-black m-0 p-0 fixed w-screen h-screen text-white flex   cursor-pointer">
-        <div>
+        <nav>
         <NavBar/>
-        </div>
+        </nav>
           
-          <div className="grow ml-8">
+          <main className="grow ml-8">
           <Main />
-          </div>
-          
-
-
+          </main>
+        
       </div>  
       </>
     );

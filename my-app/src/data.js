@@ -12,104 +12,141 @@ export const PostData=[
       userImage:"x logo.png",
       postMessage:'Today at 3:00 PM in Los Angeles, California. Launched Successfully!',
       postImage:"p3.jpg",
+      postVideo:'NULL',
+      time: "0h"
    },
    
    {
       name:'Anonymous_32',
-      username:'@elonmusk',
+      username:'@anonymous358496',
       userImage:"",
-      postMessage:'Today at 3:00 PM in Los Angeles, California. Launched Successfully!',
+      postMessage:"Strength and resilience in every step. Let's support access to clean water for all. #WaterIsLife #CommunityStrong",
       postImage:"p9.jpg",
+      postVideo:'NULL',
+      time: "1h"
    },
    
    {
-      name:'Elon Musk',
-      username:'@elonmusk',
-      userImage:"Today ",
-      postMessage:'Today at 3:00 PM in Los Angeles, California. Launched Successfully!',
+      name:'Alexander Smith',
+      username:'@alexsmith',
+      userImage:"",
+      postMessage:'Guess Who?',
       postImage:"p1.jpg",
+      postVideo:'NULL',
+      time: "11h"
+   },
+   
+   {
+      name:'Jeff',
+      username:'@jeff',
+      userImage:"",
+      postMessage:'Simply Soothing!',
+      postImage:"NULL",
+      postVideo:"p2.mp4",
+      time: "10h"
+   },
+   
+   {
+      name:'Mike',
+      username:'@mike325',
+      userImage:" ",
+      postMessage:'New Version Ready, Testing It Out!',
+      postImage:"NULL",
+      postVideo:"p4.mp4",
+      time: "9h"
+   },
+   
+   {
+      name:'christine',
+      username:'@christy32',
+      userImage:"Epic moments from the live concert performance!",
+      postMessage:'',
+      postImage:"NULL",
+      postVideo:"p5.mp4",
+      time: "8h"
+   },
+   
+   {
+      name:'Vincent',
+      username:'@vincent568',
+      userImage:"Today ",
+      postMessage:'Enjoyed alot!!',
+      postImage:"p6.jpeg",
+      postVideo:"NULL",
+      time: "17h"
+   },
+   
+   {
+      name:'Steve drake',
+      username:'@steve',
+      userImage:"Today ",
+      postMessage:"Powering up for a workout! #fitness #gym #healthyhabits",
+      postImage:"p7.jpeg",
+      postVideo:"NULL",
+      time: "16h"
+   },
+   
+   {
+      name:'George Thomas',
+      username:'@thomas',
+      userImage:"",
+      postMessage:"Celebrating life with vibrant colors and joyful moments! #LookMyDab #FestivalVibes #CommunityGathering 🎉🌈",
+      postImage:"p8.jpeg",
+      postVideo:"NULL",
+      time: "5h"
+   },
+   
+   {
+      name:'Bill Payne',
+      username:'@bill',
+      userImage:"Today ",
+      postMessage:'An Adventurous & Scary Dream last night!',
+      postImage:"p10.jpeg",
+      postVideo:"NULL",
+      time: "4h"
    },
    
    {
       name:'Elon Musk',
       username:'@elonmusk',
-      userImage:"Today ",
-      postMessage:'Today at 3:00 PM in Los Angeles, California. Launched Successfully!',
-      postImage:"p2.jpg",
-   },
-   
-   {
-      name:'Elon Musk',
-      username:'@elonmusk',
-      userImage:"Today ",
-      postMessage:'Today at 3:00 PM in Los Angeles, California. Launched Successfully!',
-      postImage:"p4.jpg",
-   },
-   
-   {
-      name:'Elon Musk',
-      username:'@elonmusk',
-      userImage:"Today ",
-      postMessage:'Today at 3:00 PM in Los Angeles, California. Launched Successfully!',
-      postImage:"p5.jpg",
-   },
-   
-   {
-      name:'Elon Musk',
-      username:'@elonmusk',
-      userImage:"Today ",
-      postMessage:'Today at 3:00 PM in Los Angeles, California. Launched Successfully!',
-      postImage:"p6.jpg",
-   },
-   
-   {
-      name:'Elon Musk',
-      username:'@elonmusk',
-      userImage:"Today ",
-      postMessage:'Today at 3:00 PM in Los Angeles, California. Launched Successfully!',
-      postImage:"p7.jpg",
-   },
-   
-   {
-      name:'Elon Musk',
-      username:'@elonmusk',
-      userImage:"Today ",
-      postMessage:'Today at 3:00 PM in Los Angeles, California. Launched Successfully!',
-      postImage:"p8.jpg",
-   },
-   
-   {
-      name:'Elon Musk',
-      username:'@elonmusk',
-      userImage:"Today ",
-      postMessage:'Today at 3:00 PM in Los Angeles, California. Launched Successfully!',
-      postImage:"p10.jpg",
-   },
-   
-   {
-      name:'Elon Musk',
-      username:'@elonmusk',
-      userImage:"Today ",
-      postMessage:'Today at 3:00 PM in Los Angeles, California. Launched Successfully!',
-      postImage:"p11.jpg",
-   },
-   
-   {
-      name:'Elon Musk',
-      username:'@elonmusk',
-      userImage:"Today ",
-      postMessage:'Today at 3:00 PM in Los Angeles, California. Launched Successfully!',
-      postImage:"p12.jpg",
+      userImage:"x logo.png",
+      postMessage:'To the stars',
+      postImage:"p14.jpg",
+      postVideo:"NULL",
+      time: "21h"
    },
 
    {
-      name:'Elon Musk',
-      username:'@elonmusk',
+      name:'Yoda Team',
+      username:'@yoda',
       userImage:"Today ",
-      postMessage:'Today at 3:00 PM in Los Angeles, California. Launched Successfully!',
-      postImage:"p13.jpg",
+      postMessage:"The coolest pup in town! 😎🐾 #dogsofinstagram #fashionista #adorablepets",
+      postImage:"NULL",
+      postVideo:"p11.mp4",
+      time: "2h"
    },
    
+   {
+      name:'Rick Astley',
+      username:'@rickastley',
+      userImage:"Today ",
+      postMessage: "Cute and curious, penguins are always a delightful sight to watch! #penguins #australia #wildlife",
+      postImage:"NULL",
+      postVideo:"p12.mp4",
+      time: "1h"
+
+   },
+
+   {
+      name:'Quincy',
+      username:'@quincy',
+      userImage:"",
+      postMessage:"Above the clouds, chasing adventures! ✈️☁️ #windowseatviews",
+      postImage:"p13.jpg",
+      postVideo:"NULL",
+      time: "3h"
+   }
+
 
 ]
 
