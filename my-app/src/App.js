@@ -1,5 +1,6 @@
 import "./App.css";
-import {NavBar, Main} from "./components.js";
+import {SideBar} from "./components/sideBar.js";
+import {Main} from "./components/main.js";
 
 function App(){
     return(
@@ -9,7 +10,7 @@ function App(){
        </head>
       <div className="bg-black m-0 p-0 w-screen h-screen text-white flex   cursor-pointer overflow-hidden">
         <nav>
-        <NavBar className="flex-shrink-0"/>
+        <SideBar className="flex-shrink-0 "/>
         </nav>
 
           <main className="grow ml-8 overflow-y-auto overflow-x-hidden">
