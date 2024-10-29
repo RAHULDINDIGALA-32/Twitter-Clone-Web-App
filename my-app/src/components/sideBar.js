@@ -1,19 +1,6 @@
 import React from 'react'
 import { UserData} from '../utilities/PostData.js';
-
-export function PostButton() {
-  return (
-    <div>
-
-      <button className=" mt-1 bg-[rgb(29,155,240)] hover:bg-blue-500 w-60 h-16 text-2xl rounded-full font-semibold ">
-        Post
-      </button>
-
-
-    </div>
-  )
-
-}
+import { useState } from 'react';
 
 function ProfileBar({ UserData }) {
   return (
@@ -36,6 +23,120 @@ function ProfileBar({ UserData }) {
 
   )
 }
+
+
+export function UserPost({ UserData, closePopup }) {
+  const [inputText, setInputText] = useState("");
+  //const [isFocused, setIsFocused] = useState(false);
+
+  // Provide a default value if UserData is undefined
+  const { userImage = "" } = UserData || {};
+
+  const handleInput = (e) => {
+    e.target.style.height = "auto";
+    e.target.style.height = `${Math.min(e.target.scrollHeight, 200)}px`;
+    setInputText(e.target.value); 
+  };
+
+ // const handleFocus = () => setIsFocused(true);
+ // const handleBlur = () => setIsFocused(false);
+
+  return (
+    <div className="relative flex flex-col justify-start  w-full  mx-auto bg-black text-white  rounded-3xl shadow-lg">
+    
+    <div className="flex justify-between items-center w-full mt-2 ml-3 mr-3">
+        
+        <div className='flex flex-row justify-center items-center text-center w-10 h-10 hover:rounded-full hover:bg-zinc-800 '>
+        <button onClick={closePopup} className=" text-white   text-center text-4xl pb-2 ">
+          x
+        </button>
+        </div>
+
+        <button className="text-[rgb(29,155,240)] font-bold text-xl mr-10">
+          Drafts
+        </button>
+      </div>
+   
+      
+     
+      <div className="flex flex-col w-full p-2 m-2 mt-2">
+       <div className='flex flex-row '>
+        <div className="w-14 h-14 m-2 rounded-full overflow-hidden">
+          <img src={userImage} alt="user" className="w-fit h-fit" />
+        </div>
+
+        <div className="flex flex-col w-full gap-3">
+          <textarea
+            placeholder="What is happening?"
+            onInput={handleInput}
+          //  onFocus={handleFocus}
+           // onBlur={handleBlur}
+            rows="1"
+            className="mt-4 outline-none w-full bg-black text-2xl min-h-[100px] resize-none text-white"
+            style={{ overflowY: "hidden", maxHeight: "200px" }}
+          />
+        </div>
+        </div>
+
+      <div className=''>
+      <div className="flex items-center text-[rgb(29,155,240)] font-bold text-lg mt-2 gap-2">
+                <span className="material-symbols-outlined">globe_asia</span>
+                <span>Everyone can reply</span>
+              </div>
+              <div className="border-b border-[rgb(47,51,54)] w-[99%] mt-2 "></div>
+
+          <div className="flex flex-row items-center justify-between w-full text-[rgb(29,155,240)] mt-2">
+            <div className="flex gap-4  ">
+              <span className="material-symbols-outlined text-2xl font-bold">image</span>
+              <span className="material-symbols-outlined text-2xl font-bold">gif_box</span>
+              <span className="material-symbols-outlined text-2xl font-bold">ballot</span>
+              <span className="material-symbols-outlined text-2xl font-bold">mood</span>
+              <span className="material-symbols-outlined text-2xl font-bold">edit_calendar</span>
+              <span className="material-symbols-outlined text-2xl font-bold">location_on</span>
+            </div>
+
+            <button
+              className={`text-white px-5 py-2 text-xl mr-4 rounded-full font-semibold ${
+                inputText.trim() ? "bg-[rgb(29,155,240)]" : "bg-[rgb(15,78,120)] cursor-not-allowed"
+              }`}
+              disabled={!inputText.trim()}
+            >Post</button>
+          </div>
+      </div>
+        
+        
+      </div>
+
+    </div>
+  );
+}
+
+
+// Main Component to handle popup visibility
+export function PostButton({ UserData }) {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const openPopup = () => setIsPopupOpen(true);
+  const closePopup = () => setIsPopupOpen(false);
+
+  return (
+    <>
+      <button
+        onClick={openPopup}
+        className="text-white bg-[rgb(29,155,240)] px-6 py-3 text-xl rounded-full font-semibold"
+      >
+        Post
+      </button>
+
+      {isPopupOpen && (
+        <div className="z-30 fixed top-12 left-[30.4%] inset-0 max-w-[755px] flex items-start justify-center rounded-3xl bg-zinc-850 bg-opacity-80 ">
+          <UserPost UserData={UserData} closePopup={closePopup} />
+        </div>
+      )}
+    </>
+  );
+}
+
 
 
 export function SideBar() {
@@ -94,7 +195,7 @@ export function SideBar() {
 
       </ul>
 
-      <PostButton />
+      <PostButton UserData={UserData}/>
       <ProfileBar UserData={UserData} />
     </div>
 
