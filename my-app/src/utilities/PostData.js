@@ -21,7 +21,8 @@ export const PostData = [
       views: "536K",
       bio: "We are Anonymous, we are legion, we do not forgive, we do not forget. Expect us.",
       followers: "20k",
-      following: "50"
+      following: "50",
+      follow: "True"
    },
    {
       id: 2,
@@ -38,9 +39,11 @@ export const PostData = [
       views: "536K",
       bio: "Music lover and aspiring artist. Sharing my journey and creativity! 🎶✨",
       followers: "15k",
-      following: "30"
+      following: "30",
+      follow: "False"
    },
    {
+      id: 3,
       name: 'Jeff',
       username: '@jeff',
       userImage: "10.jpg",
@@ -54,9 +57,11 @@ export const PostData = [
       views: "536K",
       bio: "Nature enthusiast capturing beautiful moments. Let's explore together! 🌲📸",
       followers: "25k",
-      following: "80"
+      following: "80",
+      follow: "False"
    },
    {
+      id: 4,
       name: 'Mike',
       username: '@mike325',
       userImage: "4.jpg",
@@ -73,6 +78,7 @@ export const PostData = [
       following: "60"
    },
    {
+      id: 5,
       name: 'Christine',
       username: '@christy32',
       userImage: "1.jpg",
@@ -86,9 +92,11 @@ export const PostData = [
       views: "536K",
       bio: "Concert junkie and music lover. Capturing the magic of live performances! 🎶✨",
       followers: "30k",
-      following: "100"
+      following: "100",
+      follow: "True"
    },
    {
+      id: 6,
       name: 'Elon Musk',
       username: '@elonmusk',
       userImage: "x logo.png",
@@ -105,6 +113,7 @@ export const PostData = [
       following: "110"
    },
    {
+      id: 7,
       name: 'Vincent',
       username: '@vincent568',
       userImage: "7.jpg",
@@ -118,9 +127,11 @@ export const PostData = [
       views: "536K",
       bio: "Artist and creator. Expressing my thoughts through art. Join me on my journey! 🎨🌈",
       followers: "8k",
-      following: "20"
+      following: "20",
+      follow: "False"
    },
    {
+      id: 8,
       name: 'Steve Drake 💪',
       username: '@steve',
       userImage: "8.jpg",
@@ -137,6 +148,7 @@ export const PostData = [
       following: "200"
    },
    {
+      id: 9,
       name: 'George Thomas',
       username: '@thomas',
       userImage: "9.jpg",
@@ -153,6 +165,7 @@ export const PostData = [
       following: "70"
    },
    {
+      id: 10,
       name: 'Bill Payne 🦋',
       username: '@bill',
       userImage: "4.jpg",
@@ -169,6 +182,7 @@ export const PostData = [
       following: "25"
    },
     {
+      id: 11,
       name: 'Elon Musk',
       username: '@elonmusk',
       userImage: "x logo.png",
@@ -185,8 +199,9 @@ export const PostData = [
       following: "110"
    },
    {
-      name: 'Yoda Team',
-      username: '@yoda',
+      id: 12,
+      name: 'Yodha Team',
+      username: '@yodha',
       userImage: "6.jpg",
       postMessage: "The coolest pup in town! 😎🐾 #dogsofinstagram #fashionista #adorablepets",
       postImage: "NULL",
@@ -198,9 +213,11 @@ export const PostData = [
       views: "536K",
       bio: "A fun-loving dog with a flair for fashion! 🐶👗",
       followers: "5k",
-      following: "10"
+      following: "10",
+      follow: "True"
    },
    {
+      id: 13,
       name: 'Rick Astley',
       username: '@rickastley',
       userImage: "7.jpg",
@@ -217,6 +234,7 @@ export const PostData = [
       following: "150"
    },
    {
+      id: 14,
       name: 'Quincy',
       username: '@quincy',
       userImage: "3.jpg",

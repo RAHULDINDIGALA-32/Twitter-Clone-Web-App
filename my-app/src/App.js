@@ -11,7 +11,7 @@ function App(){
       <div className="bg-black m-0 p-0 w-screen h-screen text-white flex   cursor-pointer overflow-hidden">
         <nav>
         <SideBar className="flex-shrink-0 "/>
-        </nav>
+        </nav>    
 
           <main className="grow ml-8 overflow-y-auto overflow-x-hidden">
           <Main/>

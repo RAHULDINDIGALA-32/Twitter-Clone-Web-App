@@ -33,11 +33,11 @@ function Post({ x }) {
           </div>
           
           {showPopup && (
-          <div className="flex flex-col abosulute overflow-visible left-0 top-0 p-2 w-[400px] h-fit bg-black text-white rounded-3xl shadow-lg shadow-slate-200 z-0 ease-in-out"
+          <div className="flex flex-col abosolute overflow-visible left-0 top-0 p-2 w-[400px] h-fit bg-black text-white rounded-3xl shadow-lg shadow-slate-200 z-0 ease-in-out"
           onMouseLeave={handleMouseLeave}>
           
-            <div className="flex flex-row justify-between ml-1">
-              <div className="w-14 h-14 m-2 rounded-full overflow-hidden">
+            <div className="flex flex-row justify-between items-center ml-1">
+              <div className="w-20 h-20 m-2 rounded-full overflow-hidden">
                 <img src={x.userImage} alt="user" className="w-fit h-fit" />
               </div>
               
@@ -46,7 +46,7 @@ function Post({ x }) {
             </div>
           
         <div className="flex flex-row text-xl font-bold ml-2">
-        <p>{x.name}</p>
+        <p className='hover:underline '>{x.name}</p>
         <img src="verify.png" alt="verified" className="w-5 h-5 mt-1 ml-2" />
       </div>
       <p className='text-zinc-400 text-xl ml-2'>{x.username}</p>
@@ -78,13 +78,13 @@ function Post({ x }) {
             <p className="">{x.postMessage}</p>
           </div>
   
-          <div className="role:Post_Image/Video pt-2  pr-4 w-full h-auto rounded-lg overflow-hidden">
+          <div className="role:Post_Image/Video pt-2  pr-4 w-full h-auto  rounded-lg overflow-hidden">
             {x.postImage === 'NULL' ? (
-              <video  controls className="rounded-lg w-full max-w-[100%] h-auto max-h-[60vh] min-h-[30vh] object-fit">
+              <video  controls className="rounded-lg w-fit max-w-[100%] h-auto max-h-[60vh] min-h-[30vh] object-fit border-2 border-[rgb(47,51,54)] border-solid">
                 <source src={x.postVideo} type="video/mp4" />
               </video>
             ) : (
-              <img src={x.postImage} alt="postImage" className="rounded-2xl w-fit  h-auto max-h-[60vh] " />
+              <img src={x.postImage} alt="postImage" className="rounded-2xl w-fit  h-auto max-h-[60vh] border-2 border-[rgb(47,51,54)] border-solid" />
             )}
           </div>
   
@@ -157,8 +157,8 @@ function Post({ x }) {
   export function PostList() {
     return (
       <div>
-        {PostData.map((x, index) => (
-          <div key={index} className=''>
+        {PostData.map((x) => (
+          <div key={x.id} className=''>
             <Post x={x} />
           </div>
         ))}
@@ -168,7 +168,7 @@ function Post({ x }) {
   
 export function FeedHeader(){
   return(
-     <div className='sticky top-0 w-full h-[70px] flex  justify-around  border-y-1 border-[rgb(47,51,54)]  bg-black bg-opacity-80 backdrop-blur-md text-white'>
+     <div className='sticky z-10 top-0 w-full h-[70px] flex  justify-around  border-y-1 border-[rgb(47,51,54)]  bg-black bg-opacity-80 backdrop-blur-md text-white'>
       <div className=" flex-col text-xl content-center justify-center hover:bg-zinc-900 w-[50%] text-center font-bold blur-none">
          <p>For you</p>
          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/5  h-1 bg-[rgb(29,155,240)] rounded"></div>
@@ -235,11 +235,11 @@ export function UserPost({ UserData }) {
             <span className="material-symbols-outlined text-2xl font-bold">ballot</span>
             <span className="material-symbols-outlined text-2xl font-bold">mood</span>
             <span class="material-symbols-outlined text-2xl font-bold">edit_calendar</span>
-            <span className="material-symbols-outlined text-2xl" font-bold>location_on</span>
+            <span className="material-symbols-outlined text-2xl font-bold">location_on</span>
           </div>
 
           <button
-            className={`text-white px-6 py-3 text-xl  rounded-full font-semibold  ${
+            className={`text-white px-5 py-2 text-xl  rounded-full font-semibold  ${
               inputText.trim() ? "bg-[rgb(29,155,240)]" : "bg-[rgb(15,78,120)] cursor-not-allowed"
             }`}
             disabled={!inputText.trim()}
