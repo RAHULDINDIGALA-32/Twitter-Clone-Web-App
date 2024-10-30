@@ -10,7 +10,7 @@ export default function SearchComponent() {
     const query = e.target.value;
     setSearchQuery(query);
 
-    // Search algorithm to filter users based on name or username
+     // Search algorithm to filter users based on name or username
     if (query.trim() !== '') {
       const results = PostData.filter(
         (user) =>
@@ -35,8 +35,8 @@ export default function SearchComponent() {
         {/* Search Results Pop-up */}
       
        {searchFocused && searchQuery && (
-          <div className="absolute z-20  top-[70px] w-full min-h-[120px] max-h-[300px] overflow-y-auto bg-black p-3 rounded-xl shadow-lg shadow-slate-200  ease-in-out"
-          onWheel={(e) => e.stopPropagation()} // Prevents parent scrolling 
+          <div className="scrollbar-custom absolute z-15 top-[70px] w-full min-h-[120px] max-h-[300px] overflow-y-auto bg-black p-3 rounded-xl shadow-lg shadow-slate-200  ease-in-out"
+          onWheel={(e) => e.stopPropagation()}   // Prevents parent scrolling 
           >
             {searchResults.length > 0 ? (
               searchResults.map((user) => (
@@ -66,8 +66,7 @@ export default function SearchComponent() {
               </div>
             ) : null
         }
-
-      
+  
     </div>
   );
 }

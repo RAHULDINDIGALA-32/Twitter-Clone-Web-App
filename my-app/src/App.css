@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }*/
+
+
+/* In your CSS file */
+.main-component {
+  display: flex;
+  overflow: hidden;
+}
+
+.feed {
+  overflow-y: scroll;
+  height: 100vh;
+  flex: 1;
+}
+
+.explore-container {
+  position: sticky;
+  top: 0;
+  height: 80vh; /* Limits exploreX scroll to 80% of viewport */
+  overflow-y: hidden;
+}

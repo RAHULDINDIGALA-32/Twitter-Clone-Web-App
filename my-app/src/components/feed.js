@@ -21,7 +21,7 @@ function Post({ x }) {
     setShowPopup(false);
   };
     return (
-      <div className="flex flex-1 w-full   border-y-1  border-[rgb(47,51,54)] border-solid overflow-y-auto max-h-screen  hover:bg-zinc-950">
+      <div className="flex flex-1 w-full relative  border-y-1  border-[rgb(47,51,54)] border-solid overflow-y-auto max-h-screen  hover:bg-zinc-950">
   
          <div className="relative w-[9%] h-auto">
 
@@ -33,7 +33,7 @@ function Post({ x }) {
           </div>
           
           {showPopup && (
-          <div className="flex flex-col abosolute overflow-visible left-0 top-0 p-2 w-[400px] h-fit bg-black text-white rounded-3xl shadow-lg shadow-slate-200 z-0 ease-in-out"
+          <div className="flex flex-col abosolute  overflow-visible left-8 top bottom-0 p-2 w-[400px] h-fit bg-black text-white rounded-3xl shadow-lg shadow-slate-200 z-0 ease-in-out"
           onMouseLeave={handleMouseLeave}>
           
             <div className="flex flex-row justify-between items-center ml-1">
@@ -45,8 +45,8 @@ function Post({ x }) {
        
             </div>
           
-        <div className="flex flex-row text-xl font-bold ml-2">
-        <p className='hover:underline '>{x.name}</p>
+        <div className="flex flex-row text-xl  font-bold ml-2">
+        <p className=' hover:underline '>{x.name}</p>
         <img src="verify.png" alt="verified" className="w-5 h-5 mt-1 ml-2" />
       </div>
       <p className='text-zinc-400 text-xl ml-2'>{x.username}</p>
@@ -68,7 +68,7 @@ function Post({ x }) {
         <div className=" flex-col w-[91%] h-[100%] b-lime-300">
   
           <div className="role:profile_name mt-2 b-teal-500 w-[100%] h-6 flex justify- gap-2 ">
-            <p className="text-xl font-bold h-fit">{x.name}</p>
+            <p className="text-xl font-bold h-fit hover:underline">{x.name}</p>
             <img src="verify.png" alt="verified" className="w-5 h-5 mt-1" />
             <p className="text-zinc-400 text-xl">{x.username}</p>
             <p className="text-zinc-400 text-xl">{x.time}</p>
@@ -156,9 +156,9 @@ function Post({ x }) {
 
   export function PostList() {
     return (
-      <div>
+      <div className="relative">
         {PostData.map((x) => (
-          <div key={x.id} className=''>
+          <div key={x.id} className='relative '>
             <Post x={x} />
           </div>
         ))}
