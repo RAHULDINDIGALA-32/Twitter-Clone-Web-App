@@ -3,8 +3,27 @@ import { TrendingData } from "../utilities/TrendingData";
 import { PostData } from "../utilities/PostData";
 import Search from "./search.js";
 
+function Premium(){
+  return(
+   <div className="flex flex-col w-[90%] h-auto mt-3 border border-[rgb(47,51,54)] rounded-2xl ">
+    <div className="p-3 pt-1">
+     <div className="">
+     <p className="text-white font-bold text-2xl pl-3 mt-3">Subscribe to Premium</p>
+    </div>
+    <div className="">
+     <p className="text-white  text-lg pl-3 mt-3">Subscribe to unlock new features and if eligible, receive a share of revenue.</p>
+    </div>
+    <div className="pl-3">
+     <button className="text-white font-bold text-xl  mt-3  rounded-full w-fit px-6  h-12 text-center  bg-[rgb(29,155,240)]">Subscribe</button>
+    </div>
+  </div>
+ 
 
-// Trending Component
+ </div>
+  )
+}
+
+
 function Trending({ x }) {
   return (
     <div className="flex flex-col w-[90%] h-auto mt-4 border border-[rgb(47,51,54)]  rounded-2xl">
@@ -50,7 +69,7 @@ function Trending({ x }) {
 }
 
 
-// Follow Component
+
 function FollowList({ x }) {
   const [showPopup, setShowPopup] = useState(false);
   const [timeoutId, setTimeoutId] = useState(null);
@@ -67,14 +86,17 @@ function FollowList({ x }) {
   };
 
   return (
-    <div className="relative overflow-visible z-4">
+    <div className="relative overflow-visible z-4 hover:bg-zinc-950">
       <div className="flex flex-row items-center justify-between w-full ml-1">
         <div
           className="flex items-center"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="w-14 h-14 rounded-full overflow-hidden mr-3">
+          <div className="w-14 h-14 rounded-full overflow-hidden mr-3"
+         // onMouseEnter={handleMouseEnter}
+          //onMouseLeave={handleMouseLeave}
+          >
             <img src={x.userImage} alt="user" className="w-fit h-fit" />
           </div>
 
@@ -95,7 +117,7 @@ function FollowList({ x }) {
       {/* Popup */}
       {showPopup && (
         <div
-          className="absolute -left-36 mt-2 p-4 w-[300px] h-fit bg-black text-white rounded-2xl shadow-lg shadow-slate-200 z-10 ease-in-ou "
+          className="absolute -left-28 z-30 mt-2 p-4 w-[350px] h-fit items-center bg-black text-white rounded-2xl shadow-lg shadow-slate-200 ease-in-out "
           style={{ top: "100%" }}
           onMouseLeave={handleMouseLeave}
         >
@@ -135,21 +157,33 @@ function FollowList({ x }) {
 
 function Follow({ PostData }) {
   return (
-    <div className="flex flex-col w-[90%] h-auto mt-4 border border-[rgb(47,51,54)] rounded-2xl p-3 pt-1">
-      <p className="text-white font-bold text-2xl pl-3 mt-3">Who to follow</p>
-    <div className="mt-3">
+    <div className="flex flex-col w-[90%] h-auto mt-4 border border-[rgb(47,51,54)] rounded-2xl">
+    <div className="">
+     <div className=" p-3 pt-1">
+        <p className="text-white font-bold text-2xl pl-3 mt-3">Who to follow</p>
+      </div>
+      
+    <div className="mt-3 ">
       {PostData.filter((i) => i.follow === "True").map((i) => (
-        <div key={i.id} className="mt-1 p-3">
+       <div className="hover:bg-zinc-950">
+          <div key={i.id} className="mt-1 p-3">
           <FollowList x={i} />
         </div>
+       </div>
+      
       ))}
     </div>
-       <div className="text-[rgb(28,148,229)] text-xl hover:bg-zinc-950 p-3 pb-6 rounded-b-2xl">
+    </div>
+
+    <div className=" mb-0 ">
+        <div className="text-[rgb(28,148,229)] hover:bg-zinc-950 rounded-b-2xl text-xl  p-3 pb-6  items-center  ">
           <div className="pl-3">
-            <button>Show more</button>
+            <button className="text-center">Show more</button>
           </div>
         </div>
+      </div>
     </div>
+    
   );
 }
 
@@ -159,40 +193,29 @@ function Follow({ PostData }) {
 
 function Info() {
     return (
-      <div className="grid grid-cols-4 w-[90%] h-fit mt-4 text-zinc-500 p-3 gap-y-2">
-        {/* Row 1 with 3 columns */}
+     <div className="flex flex-col w-[90%] h-fit mt-4 text-zinc-500 text-lg p-3 gap-y-2">
+      <div className="flex flex-row w-full justify-around">
         <p className="hover:underline ">Terms of Service</p>
         <p className="hover:underline">Privacy Policy</p>
         <p className="hover:underline col-span-2">Cookie Policy</p>
-        
-        {/* Row 2 with 4 columns */}
+      </div>
+       
+      <div className="flex flex-row w-full justify-around">
         <p className="hover:underline">Accessibility</p>
         <p className="hover:underline">Ads info</p>
+        <div className="flex flex-row items-center justify-center">
         <p className="hover:underline">More</p>
+        <span className="material-symbols-outlined mt-1 ">more_horiz</span>
+        </div>
+        
         <p className="">© 2024 X Corp.</p>
-      </div>
+      </div>  
+      
+     
+   </div>
     );
   }
   
-function Premium(){
-     return(
-      <div className="flex flex-col w-[90%] h-auto mt-3 border border-[rgb(47,51,54)] rounded-2xl ">
-       <div className="p-3 pt-1">
-        <div className="">
-        <p className="text-white font-bold text-2xl pl-3 mt-3">Subscribe to Premium</p>
-       </div>
-       <div className="">
-        <p className="text-white  text-lg pl-3 mt-3">Subscribe to unlock new features and if eligible, receive a share of revenue.</p>
-       </div>
-       <div className="pl-3">
-        <button className="text-white font-bold text-xl  mt-3  rounded-full w-fit px-6  h-12 text-center  bg-[rgb(29,155,240)]">Subscribe</button>
-       </div>
-     </div>
-    
- 
-    </div>
-     )
-}
 
 
 
@@ -204,7 +227,7 @@ export  function ExploreX() {
 
     <>
       <Search/>
-      <div className="flex flex-col w-full h-full overflow-y-auto ml-5">
+      <div className="flex flex-col z-25 w-full h-full overflow-y-auto ml-5" >
      {/* Search Bar */}      
       <Premium/>
       <Trending x={TrendingData} />
